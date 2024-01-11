@@ -12,10 +12,11 @@ const router = createRouter({
     routes
 })
 
-
 const app = createApp(App);
 
 app.use(router);
+
+// Open /popup route by default when opening the on-page extension popup
 router.push('/content');
 
 app.mount('#content-app')
