@@ -1,10 +1,8 @@
 <template>
-    <div class="flex flex-col items-start w-full p-6 pb-8">
-        <div class="flex flex-col items-center w-full p-6 space-y-8 mt-4">
-            <div class="flex flex-col items-center space-y-3">
-                <span class="text-base">This is page managed by content script</span>
-            </div>
-        </div>
+    <div class="flex flex-col items-center space-y-3 text-lg p-5">
+        <span class="text-center">This is the page managed by the content script</span>
+
+        <span class="text-center">See <span class="font-medium">`src/pages/content/Index.vue`</span></span>
     </div>
 </template>
 

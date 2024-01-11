@@ -2,6 +2,8 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+// This works for both content app (content.html)
+// and popup app (popup.html)
 html {
     body {
         #app {
@@ -11,9 +13,9 @@ html {
         }
         &.popup {
             width: 357px;
-            min-height: 600px;
-            height: 600px;
-            max-height: 600px;
+            min-height: 400px;
+            height: 400px;
+            max-height: 400px;
         }
     }
 }

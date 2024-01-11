@@ -1,12 +1,37 @@
 {
     "manifest_version": 3,
-    "name": "My Chrome Extension",
+    "name": "__MSG_appName__",
+    "description": "__MSG_appDesc__",
     "version": "1.0.0",
-    "description": "",
+    "default_locale": "en",
+    "background": {
+        "service_worker": "js/extension-worker.js",
+        "type": "module"
+    },
+    "permissions": [
+        "scripting"
+    ],
+    "host_permissions": [
+        "*://*/*"
+    ],
     "icons": {
         "128": "icons/128.png"
     },
     "action": {
         "default_popup": "popup.html"
-    }
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "js/*",
+                "css/*",
+                "icons/*",
+                "assets/*",
+                "content.html"
+            ],
+            "matches": [
+                "*://*/*"
+            ]
+        }
+    ]
 }

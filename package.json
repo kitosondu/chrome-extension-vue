@@ -19,11 +19,13 @@
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
+    "@types/chrome": "^0.0.256",
     "@types/node": "^20.10.8",
     "@vitejs/plugin-vue": "^5.0.3",
     "@vue/compiler-sfc": "^3.4.8",
     "adm-zip": "^0.5.10",
     "autoprefixer": "^10.3.4",
+    "flowbite": "^2.2.1",
     "postcss": "^8.3.6",
     "sass": "^1.69.7",
     "tailwindcss": "^3.4.1",
