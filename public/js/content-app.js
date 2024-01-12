@@ -4,7 +4,7 @@
     if (!container) {
         container = document.createElement('div');
         container.style.position = 'absolute';
-        container.style.left = `-10000px`;
+        container.style.left = `-${Number.MAX_SAFE_INTEGER}px`;
         container.setAttribute('id', id);
         document.body.appendChild(container);
     }

@@ -29,7 +29,6 @@ function main() {
 
     // copy other files that are required for extension
     const toCopy = [
-        // 'dist',
         '_locales',
         'manifest.json',
         'extension-worker.js'
