@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "extension-build": "node helper-scripts/create-extension-build.js",
-    "vue-build": "vue-tsc --noEmit && vite build",
-    "build": "npm run vue-build && npm run extension-build",
+    "build-extension": "node helper-scripts/create-extension-build.js",
+    "build-vue": "vue-tsc --noEmit && vite build",
+    "build": "npm run build-vue && npm run build-extension",
     "serve": "vite preview"
   },
   "dependencies": {

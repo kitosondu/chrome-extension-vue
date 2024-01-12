@@ -26,7 +26,7 @@ const showContentApp = () => {
 {
     name: 'Popup Index',
     meta: {
-        layout: 'Content'
+        layout: 'Popup'
     }
 }
 </route>

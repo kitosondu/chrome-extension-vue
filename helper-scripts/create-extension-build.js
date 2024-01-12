@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const config = require('../browser-extension.config.js');
 
 function main() {
 
@@ -8,7 +7,9 @@ function main() {
     const manifest = JSON.parse(fs.readFileSync(path.join(__dirname, '../manifest.json'), 'utf8'));
     const version = manifest.version;
 
-    const extensionSlug = config.buildFileName;
+    // Extract name from _locales/en/messages.json
+    const messages = JSON.parse(fs.readFileSync(path.join(__dirname, '../_locales/en/messages.json'), 'utf8'));
+    const extensionName = messages.appName.message;
 
     // remove build dir if exists and re-create
     if (fs.existsSync(path.join(__dirname, '../extension-build'))) {
@@ -46,7 +47,7 @@ function main() {
     const zip = require('adm-zip');
     const zipFile = new zip();
     zipFile.addLocalFolder(path.join(__dirname, '../extension-build'));
-    zipFile.writeZip(path.join(__dirname, `../extension-build/${extensionSlug}-${version}.zip`));
+    zipFile.writeZip(path.join(__dirname, `../extension-build/${extensionName} ${version}.zip`));
 
     console.log('done');
 }
