@@ -3,6 +3,8 @@
     let container = document.getElementById(id);
     if (!container) {
         container = document.createElement('div');
+        container.style.position = 'absolute';
+        container.style.left = `-10000px`;
         container.setAttribute('id', id);
         document.body.appendChild(container);
     }
