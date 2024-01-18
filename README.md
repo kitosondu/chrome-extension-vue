@@ -95,7 +95,11 @@ Note: the `public` directory is the part of the Vue application but it also has 
 
 ### Development
 
-To work on the Vue app, run `npm run dev`.
+To work on the Vue app, run `npm run dev`. This will start the development server at localhost:5173. 
+
+Important: [localhost:5173](http://localhost:5173) index page will not work. Use these URLs instead:
+
+- [localhost:5173/popup.html](http://localhost:5173/popup.html) &mdash; extension popup
+- [localhost:5173/content.html](http://localhost:5173/content.html) &mdash; extension on-page content
 
 This template does not provide HMR (Hot Module Replacement) for the extension. So if you make changes to the extension's code and want to test that in the browser, you will need to re-build the extension (`npm run build`) and reload the extension on the [chrome://extensions](chrome://extensions) page.
-
