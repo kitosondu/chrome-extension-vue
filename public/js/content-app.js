@@ -61,15 +61,18 @@
     `;
 
     // remove the content app when the close button is clicked
+    // (an alternative would be to call chrome.runtime.sendMessage({ message: 'close_content_app' })
+    // from the iframe content)
     const closeButton = shadowRoot.getElementById('close-btn');
     closeButton.addEventListener('click', () => {
         container.remove();
-        // console.log('send "close_content_app" message')
-        // alert('ALERT: send "close_content_app" message')
-        // chrome.runtime.sendMessage({
-        //     message: 'close_content_app'
-        // });
     });
+
+    // this sets focus to the iframe content which allows to use keyboard shortcuts,
+    // for example Escape to close the app container
+    setTimeout(function () {
+        shadowRoot.querySelector('iframe').contentWindow.focus();
+    }, 100);
 
 })();
 
